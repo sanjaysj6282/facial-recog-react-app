@@ -1,7 +1,15 @@
 import React from 'react'
 import './Login.css';
+import { Link } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  // const navigate = useNavigate();
+
+  // const Mainpage = () => {
+  //   <Link className="nav-link" to="/mainpage#"></Link>
+  // } 
+
   return (
     <div className='my-2'>
       {/* <!-- Section: Design Block --> */}
@@ -45,10 +53,9 @@ function Login() {
                   </div>
 
                   {/* <!-- Submit button --> */}
-                  <button type="button" className="btn btn-primary btn-block mb-4">Sign in</button>
-
+                  <Link to="/mainpage" className="btn btn-primary">Sign up</Link>
+                  {/* <button type="button" className="btn btn-primary btn-block mb-4" onclick={Mainpage}>Sign in</button> */}
                 </form>
-
               </div>
             </div>
           </div>
