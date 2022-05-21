@@ -3,7 +3,7 @@ import './Login.css';
 
 function Login() {
   return (
-    <div className='my-1'>
+    <div className='my-2'>
       {/* <!-- Section: Design Block --> */}
       <section className=" text-center text-lg-start">
         <div className="card mb-3">
