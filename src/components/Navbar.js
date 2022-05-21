@@ -12,11 +12,11 @@ function Navbar(props) {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">{props.Textabout}</a>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home </a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link disabled">About</a>
+                    <a class="nav-link active" aria-current="page" href="/">{props.TextAbout}</a>
                     </li>
                 </ul>
                 </div>
