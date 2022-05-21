@@ -53,7 +53,7 @@ function Login() {
                   </div>
 
                   {/* <!-- Submit button --> */}
-                  <Link to="/mainpage" className="btn btn-primary">Sign up</Link>
+                  <Link to="/mainpage" className="btn btn-primary">Sign in</Link>
                   {/* <button type="button" className="btn btn-primary btn-block mb-4" onclick={Mainpage}>Sign in</button> */}
                 </form>
               </div>
