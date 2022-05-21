@@ -14,13 +14,12 @@ function Mainpage() {
                 alt="..."
               />
               <div className="card-body">
-                <h5 className="card-title">Face</h5>
+                <h5 className="card-title">Add new Student</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  To add new student.
                 </p>
                 <a href="/" className="btn btn-primary">
-                  Go somewhere
+                  Click here
                 </a>
               </div>
             </div>
@@ -33,13 +32,12 @@ function Mainpage() {
                 alt="..."
               />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Add attendance</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  To register attendance.
                 </p>
                 <a href="/" className="btn btn-primary">
-                  Go somewhere
+                  Click here
                 </a>
               </div>
             </div>
