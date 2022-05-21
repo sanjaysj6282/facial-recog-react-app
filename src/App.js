@@ -1,13 +1,18 @@
 import Login from './Components/Login';
 import Navbar from './Components/Navbar';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-let title="Smart Attendance System"
+let titles="Smart Attendance System";
 let about="About";
 function App() {
   return (
     <div className="App">
-      <Navbar title={title} TextAbout={about}/>
-      <Login/>
+      <BrowserRouter>
+        <Navbar title={titles} TextAbout={about}/>
+        <Routes>
+          <Route path="/" element={<Login/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
