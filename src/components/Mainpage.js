@@ -9,7 +9,7 @@ function Mainpage() {
           <div className="col-md-4">
             <div className="card" style={{ width: "18rem" }}>
               <img
-                src="images/add_attendance.png"
+                src="Images/add_attendance.png"
                 className="card-img-top"
                 alt="..."
               />
@@ -28,7 +28,7 @@ function Mainpage() {
           <div className="col-md-4">
             <div className="card" style={{ width: "18rem" }}>
               <img
-                src="images/verify_attendance.png"
+                src="Images/verify_attendance.png"
                 className="card-img-top"
                 alt="..."
               />
@@ -46,7 +46,7 @@ function Mainpage() {
           <div className="col-md-4">
             <div className="card" style={{ width: "18rem" }}>
               <img
-                src="images/view_attendance.png"
+                src="Images/view_attendance.png"
                 className="card-img-top"
                 alt="..."
               />
