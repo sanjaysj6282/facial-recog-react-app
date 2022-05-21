@@ -27,7 +27,7 @@ function Login() {
                   {/* <!-- Email input --> */}
                   <div className="form-outline mb-4">
                     <input type="email" id="form2Example1" className="form-control" />
-                    <label className="form-label" for="form2Example1">Email address</label>
+                    <label className="form-label" for="form2Example1">User name</label>
                   </div>
 
                   {/* <!-- Password input --> */}
