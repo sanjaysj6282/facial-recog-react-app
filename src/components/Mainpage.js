@@ -7,7 +7,8 @@ function Mainpage() {
       <div className="container my-3">
         <h2 className="mb-5 blue">Welcome to Smart Face recognition system</h2>
         <div className="row">
-          <div className="col-md-4">
+          {/* <div className="col-md-4"> */}
+          <div className="col-md-6">
             <div className="card" style={{ width: "18rem" }}>
               <img
                 src="Images/add_attendance.png"
@@ -26,7 +27,8 @@ function Mainpage() {
             </div>
           </div>
           
-          <div className="col-md-4">
+          {/* <div className="col-md-4"></div> */}
+          <div className="col-md-6">
             <div className="card" style={{ width: "18rem" }}>
               <img
                 src="Images/verify_attendance.png"
@@ -44,7 +46,7 @@ function Mainpage() {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          {/* <div className="col-md-4">
             <div className="card" style={{ width: "18rem" }}>
               <img
                 src="Images/view_attendance.png"
@@ -61,7 +63,7 @@ function Mainpage() {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
