@@ -22,8 +22,8 @@ camera = cv2.VideoCapture(0)
 
 detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
-file = open('logtext.txt', 'w')
-filecsv = open('logcsv.csv', 'w')
+file = open('./static/logtext.txt', 'w')
+filecsv = open('./static/logcsv.csv', 'w')
 writer = csv.writer(filecsv)
 header = ['Name', 'Time', 'Date']
 writer.writerow(header)
