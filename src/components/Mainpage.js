@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function Mainpage() {
   return (
@@ -18,9 +19,9 @@ function Mainpage() {
                 <p className="card-text">
                   To add new student.
                 </p>
-                <a href="/" className="btn btn-primary">
+                <Link to="/facecollector" className="btn btn-primary">
                   Click here
-                </a>
+                </Link>
               </div>
             </div>
           </div>
