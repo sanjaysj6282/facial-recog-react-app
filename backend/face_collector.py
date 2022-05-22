@@ -4,8 +4,6 @@ import cv2
 import numpy as np
 import keyboard
 
-APP_ROOT = os.path.dirname(os.path.abspath(__file__))  # refers to application_top
-
 app = Flask(__name__)
 
 camera = cv2.VideoCapture(0)

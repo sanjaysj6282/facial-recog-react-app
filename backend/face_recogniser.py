@@ -5,8 +5,7 @@ import numpy as np
 import keyboard
 from sklearn.neighbors import KNeighborsClassifier
 from datetime import datetime, date
-
-APP_ROOT = os.path.dirname(os.path.abspath(__file__))  # refers to application_top
+import csv
 
 data = np.load("face_data.npy")
 
@@ -24,8 +23,14 @@ camera = cv2.VideoCapture(0)
 
 detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
-file = open('log.txt', 'w')
+file = open('logtext.txt', 'w')
+filecsv = open('logcsv.csv', 'w')
+writer = csv.writer(filecsv)
+header = ['Name', 'Time', 'Date']
+writer.writerow(header)
+
 result = []
+
 
 def gen_frames():
     while True:
@@ -52,10 +57,8 @@ def gen_frames():
 
                 ans = out[0]
 
-                if (ans in result) == False:
+                if not (ans in result):
                     result.append(ans)
-                    file.write(ans)
-                    file.write('    ')
 
                     now = datetime.now()
                     today = date.today()
@@ -64,6 +67,13 @@ def gen_frames():
                     # Textual month, day and year
                     d2 = today.strftime("%B %d, %Y")
                     print("Date = ", d2)
+
+                    row = [ans, current_time, d2]
+                    print(row)
+                    writer.writerow(row)
+
+                    file.write(ans)
+                    file.write('    ')
                     file.write(current_time)
                     file.write('   ')
                     file.write(d2)
@@ -72,6 +82,7 @@ def gen_frames():
             key = cv2.waitKey(1)
             if keyboard.is_pressed('q'):
                 file.close()
+                filecsv.close()
                 break
 
             ret, buffer = cv2.imencode('.jpg', frame)
