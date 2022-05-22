@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import HttpClient from "./HttpClient";
-import "./style.css";
 
 function Attendance() {
   const [dataInCSV, setDataInCSV] = useState("");
@@ -9,7 +8,7 @@ function Attendance() {
   useEffect(() => {
     HttpClient.get().then(res => setDataInCSV(res));
   }, []);
-  
+
   return (
     <div>
       {dataInCSV && (
