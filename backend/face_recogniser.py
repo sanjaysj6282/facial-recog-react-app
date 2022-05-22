@@ -1,5 +1,4 @@
 from flask import Flask, render_template, Response
-import os
 import cv2
 import numpy as np
 import keyboard
