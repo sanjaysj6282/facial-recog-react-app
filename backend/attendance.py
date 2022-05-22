@@ -1,10 +1,10 @@
-from flask import Flask, request, send_file
+from flask import Flask, request, send_file, render_template
 import os
 
 app = Flask(__name__)
 
 
-@app.route('/get_csv')
+@app.route('/')
 def get_csv():
     csv_dir = "./static"
     csv_file = "logcsv.csv"
@@ -16,7 +16,7 @@ def get_csv():
     return send_file(csv_path, as_attachment=True, attachment_filename=csv_file)
 
 
-@app.route('/')
-def myapp():
-    message = "To use this app: %s/get_csv?month=value" % request.base_url
-    return message
+# @app.route('/')
+# def myapp():
+#     # message = "To use this app: %s/get_csv?month=value" % request.base_url
+#     return render_template('downloads.html')
