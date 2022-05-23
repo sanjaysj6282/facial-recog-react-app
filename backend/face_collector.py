@@ -35,7 +35,7 @@ def gen_frames():
             key = cv2.waitKey(15)
             # ch = input("Please enter a q/c:")
             if keyboard.is_pressed('q'):
-                print('You Pressed Q and its written in face_dat.npy')
+                print('You Pressed Q and its written in face_data.npy')
                 x = np.array(frames)
                 y = np.array(outputs)
 
@@ -47,7 +47,9 @@ def gen_frames():
                     old = np.load(f_name)
                     data = np.vstack([old, data])
 
-                np.save(f_name, data)
+                np.save(os.path.join('./static', f_name), data)
+                # np.save(os.path.join('Check', 'train_set'), training)
+                # np.save(f_name, data)
 
             if keyboard.is_pressed('c'):
                 frames.append(gray.flatten())
