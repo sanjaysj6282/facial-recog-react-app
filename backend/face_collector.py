@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 camera = cv2.VideoCapture(0)
 
-detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+detector = cv2.CascadeClassifier("./static/haarcascade_frontalface_default.xml")
 
 name = input("Enter your name : ")
 
