@@ -35,18 +35,19 @@
         </tr>
       </thead>
       <tbody>
-        {%for i in range(0, len)%}       
+        {%for i in range(0, len)%}
           <!-- table rows -->
           <tr>
             <th scope="row">{{ i+1 }}</th>
             <td>{{ myData[i][0] }}</td>
             <td>{{ myData[i][1] }}</td>
-            <td>{{ myData[i][2] }}</td>  
+            <td>{{ myData[i][2] }}</td>
           </tr>
-            
-          {%endfor%}
-        
-        <!-- <tr>
+        {%endfor%}
+      </tbody>
+    </table>
+
+    <!-- <tr>
           <th scope="row">1</th>
           <td>{{ myData[0][0] }}</td>
           <td>{{ myData[0][1] }}</td>
@@ -62,10 +63,8 @@
           <th scope="row">3</th>
           <td colspan="2" id="demo"></td>
           <td>@twitter</td>
-        </tr>
-      </tbody> -->
-    </table>
-    <script>
+        </tr> -->
+    <!-- <script>
       
       const attend=[]
 
@@ -79,6 +78,6 @@
       }
       document.getElementById("demo").innerHTML = attend[0];
 
-    </script>
+    </script> -->
   </body>
 </html>
