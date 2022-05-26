@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>Display Attendance</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <script
@@ -18,6 +23,7 @@
       dataArr[2]=myData[2]
     </script> -->
     <h1>Display Attendance</h1>
+
     <!--  Logic table -->
     <table class="table table-striped">
       <thead>
@@ -31,31 +37,37 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>{{ myData[0][0] }}</td>
+          <td>{{ myData[0][1] }}</td>
+          <td>{{ myData[0][2] }}</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>{{ myData[1][0] }}</td>
+          <td>{{ myData[1][1] }}</td>
+          <td>{{ myData[1][2] }}</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
+          <td colspan="2" id="demo"></td>
           <td>@twitter</td>
         </tr>
       </tbody>
     </table>
-    <!-- <table class="table table-striped table-sm">
-      <tbody>
-        <tr>
-          <td>{{ myData[0] }}</td>
-          <td>{{ myData[1] }}</td>
-          <td>{{ myData[2] }}</td>
-        </tr>
-      </tbody>
-    </table> -->
+    <script>
+      
+      const attend=[]
+
+      var idx=0;
+      for (let i = 0; i < myData.length; i++) {
+        for (let j = 0; j < myData[i].length; j++) {
+          attend.push(chunked[i][j]);
+          console.log(attend[idx]);
+          idx++;
+        }
+      }
+      document.getElementById("demo").innerHTML = attend[0];
+
+    </script>
   </body>
 </html>
