@@ -19,9 +19,7 @@ outputs = []
 def gen_frames():
     while True:
         success, frame = camera.read()  # read the camera frame
-        if not success:
-            break
-        else:
+        if success:
             faces = detector.detectMultiScale(frame)
 
             for face in faces:
@@ -40,11 +38,13 @@ def gen_frames():
                 y = np.array(outputs)
 
                 data = np.hstack([y, x])
+                f_name = "face_data.npy"
 
-                f_name = "face_data"
-
-                if os.path.exists(f_name):
-                    old = np.load(f_name)
+                path = './static/'+f_name
+                print(path)
+                if os.path.exists(path):
+                    old = np.load(path)
+                    print(old.shape)
                     data = np.vstack([old, data])
 
                 np.save(os.path.join('./static', f_name), data)
@@ -73,4 +73,5 @@ def video_feed():
 
 
 if __name__ == '__main__':
-    app.run(threaded=True, host="192.168.241.29", port=5003)
+    app.run(threaded=True, host="0.0.0.0", port=5003)
+    # app.run(threaded=True, host="192.168.241.29", port=5003)

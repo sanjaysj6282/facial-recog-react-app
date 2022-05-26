@@ -35,9 +35,7 @@ result = []
 def gen_frames():
     while True:
         success, frame = camera.read()  # read the camera frame
-        if not success:
-            break
-        else:
+        if success:
             faces = detector.detectMultiScale(frame)
 
             for face in faces:
@@ -102,4 +100,5 @@ def video_feed():
 
 
 if __name__ == '__main__':
-    app.run(threaded=True, host="192.168.241.29", port=5004)
+    app.run(threaded=True, host="0.0.0.0", port=5004)
+    # app.run(threaded=True, host="192.168.241.29", port=5004)
