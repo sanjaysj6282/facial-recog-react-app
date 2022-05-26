@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>
-        Display Attendance
-    </title>
-</head>
-<body>
-    <h1> Display Attendance </h1>
-    <table class="table table-striped table-sm">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Display Attendance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script>
+      var dataArr=[];
+      dataArr[0]=myData[0]
+      dataArr[1]=myData[1]
+      dataArr[2]=myData[2]
+    </script> -->
+    <h1>Display Attendance</h1>
+    <!--  Logic table -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Sl No</th>
+          <th scope="col">Name</th>
+          <th scope="col">Time</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <table class="table table-striped table-sm">
       <tbody>
         <tr>
           <td>{{ myData[0] }}</td>
@@ -16,6 +56,6 @@
           <td>{{ myData[2] }}</td>
         </tr>
       </tbody>
-</table>
-</body>
+    </table> -->
+  </body>
 </html>
