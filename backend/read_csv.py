@@ -13,7 +13,7 @@ def index():
 
     myData = data.values
     print(myData)
-    return render_template('home.html', myData=myData)
+    return render_template('home_view_attendance.html', myData=myData)
 
 
 if __name__ == '__main__':
