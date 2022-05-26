@@ -7,8 +7,8 @@ function Facerecogniser() {
       <iframe
           title="Face Recogniser"
           src={"http://192.168.1.67:5004/video_feed"}
-          width="960px"
-          height="685px"
+          width="640px"
+          height="480px"
           allow="accelerometer, autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
