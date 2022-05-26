@@ -11,7 +11,7 @@ camera = cv2.VideoCapture(0)
 detector = cv2.CascadeClassifier("./static/haarcascade_frontalface_default.xml")
 
 name = input("Enter your name : ")
-
+# name = ' '
 frames = []
 outputs = []
 
@@ -67,8 +67,11 @@ def index():
     return render_template('home_face_collector.html')
 
 
+# @app.route('/video_feed/<Names>')
+# def video_feed(Names):
 @app.route('/video_feed')
 def video_feed():
+    # name = Names
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
