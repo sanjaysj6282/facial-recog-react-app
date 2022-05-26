@@ -56,9 +56,9 @@ function Mainpage() {
                 <p className="card-text">
                   To View attendance.
                 </p>
-                <a href="/" className="btn btn-primary">
+                <Link to="/view_attendance" className="btn btn-primary">
                   Click here
-                </a>
+                </Link>
               </div>
             </div>
           </div>
