@@ -7,7 +7,7 @@ function Facecollector() {
       <h2>Face Adder</h2>
       <iframe
         title="Face Collector"
-        src={"http://192.168.241.29:5003/video_feed"}
+        src={"http://192.168.1.67/video_feed"}
         width="640px"
         height="480px"
         allow="accelerometer, autoplay; encrypted-media; gyroscope; picture-in-picture"
